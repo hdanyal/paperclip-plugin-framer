@@ -16,7 +16,7 @@ Paperclip plugin that proxies agent tools to **your** [Framer MCP](https://githu
 
 ## Install (Paperclip server app)
 
-Use **one** of these from the directory of your **Paperclip server** (not the framer-mcp repo):
+Use **one** of these from the directory of your **Paperclip server** (not the framer-mcp repo). Until the package is published to npm, use **git** or a **Release `.tgz`** from GitHub.
 
 ```bash
 npm install paperclip-plugin-framer@0.2.0
