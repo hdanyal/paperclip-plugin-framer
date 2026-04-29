@@ -1,0 +1,63 @@
+{
+  "name": "paperclip-plugin-framer",
+  "version": "0.2.0",
+  "description": "Framer MCP connector: CMS and publishing tools via framer-mcp (Streamable HTTP)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build",
+    "verify": "npm run typecheck && npm run build && npm pack --dry-run",
+    "release:check": "npm run verify"
+  },
+  "author": {
+    "name": "hdanyal",
+    "url": "https://github.com/hdanyal"
+  },
+  "peerDependencies": {
+    "@paperclipai/plugin-sdk": "^2026.427.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "devDependencies": {
+    "@paperclipai/plugin-sdk": "^2026.427.0",
+    "@types/node": "^24.6.0",
+    "typescript": "^5.7.3"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "paperclipPlugin": {
+    "manifest": "./dist/manifest.js",
+    "worker": "./dist/worker.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdanyal/paperclip-plugin-framer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hdanyal/paperclip-plugin-framer/issues"
+  },
+  "homepage": "https://github.com/hdanyal/paperclip-plugin-framer#readme",
+  "keywords": [
+    "paperclip",
+    "paperclip-plugin",
+    "framer",
+    "mcp"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
